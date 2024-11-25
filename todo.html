@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacus: Stay Focused! - To-Do List</title>
+    <link rel="stylesheet" href="styletodo.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">×</button>
+        <ul>
+            <li><a href="index.html" onclick="showPage('home')">Home</a></li>
+            <li><a href="timer.html" onclick="showPage('timer')">Timer</a></li>
+            <li><a href="calendar.html" onclick="showPage('Timeline')">Timeline</a></li>
+            <li><a href="todo.html" onclick="showPage('todo')">To-Do List</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+        <!-- To-Do List Page -->
+        <div class="container">
+            <div class="box">
+                <h2>To-Do List</h2>
+                <input type="text" id="inputbox" placeholder="Enter the Task">
+                <ul id="list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripttodo.js"></script>
+</body>
+</html>

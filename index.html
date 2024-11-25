@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stacus: Stay Focused!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">×</button>
+    <ul>
+      <li><a href="index.html" onclick="showPage('home')">Home</a></li>
+      <li><a href="timer.html" onclick="showPage('timer')">Timer</a></li>
+      <li><a href="calendar.html" onclick="showPage('timeline')">Timeline</a></li>
+      <li><a href="todo.html" onclick="showPage('todo')">To-Do List</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+    <!-- Home Page -->
+    <section id="home-page" class="content-section active">
+      <div class="home-header">
+        <img src="logostacus.png" alt="Stacus Logo" class="logo">
+        <h1>Stacus: Stay Focused!</h1>
+      </div>
+      <p class="welcome-text">Kelola waktu Anda dengan efisien, catat rencana belajar, dan pantau kemajuan Anda.</p>
+    </section>
+
+    <!-- Timer Page -->
+    <section id="timer-page" class="content-section">
+      <h2>Timer</h2>
+      <input type="number" id="timer-input" placeholder="Menit" min="1">
+      <button id="start-timer">Mulai</button>
+      <p id="timer-display">00:00</p>
+    </section>
+
+    <!-- Calendar Page -->
+    <section id="calendar-page" class="content-section">
+      <h2>Calendar</h2>
+      <p>Fitur kalender untuk merencanakan kegiatan Anda.</p>
+    </section>
+
+    <!-- To-Do List Page -->
+    <section id="todo-page" class="content-section">
+      <h2>To-Do List</h2>
+      <input type="text" id="todo-input" placeholder="Tugas baru">
+      <button id="add-todo">Tambah</button>
+      <ul id="todo-list"></ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

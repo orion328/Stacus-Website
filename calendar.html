@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stacus: Stay Focused!</title>
+  <link rel="stylesheet" href="stylecalendar.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">×</button>
+    <ul>
+      <li><a href="index.html" onclick="showPage('home')">Home</a></li>
+      <li><a href="timer.html" onclick="showPage('timer')">Timer</a></li>
+      <li><a href="calendar.html" onclick="showPage('timeline')">Timeline</a></li>
+      <li><a href="todo.html" onclick="showPage('todo')">To-Do List</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+    <!-- Timeline Page -->
+    <section id="timeline-page" class="content-section active">
+      <h2 class="section-title">Timeline</h2>
+      <div class="timeline-container">
+        <ul id="timeline-list">
+          <!-- Timeline items will be appended here -->
+        </ul>
+      </div>
+      <input
+        type="text"
+        id="timeline-input"
+        placeholder="Tambahkan aktivitas"
+        class="timeline-input"
+      />
+      <button id="add-timeline" class="timeline-btn">Tambah ke Timeline</button>
+    </section>
+  </div>
+
+  <script src="scriptcalendar.js"></script>
+</body>
+</html>
